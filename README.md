@@ -4,6 +4,6 @@
 
 |  Id | Exercise  |  Solution  |   |
 |---|---|---|---|
-|  217 | Contains duplicate  | [Ruby built-in function](https://github.com/ganeshskudva/Leetcode-Ruby/tree/main/Easy)  |   |
+|  217 | [Contains duplicate](https://leetcode.com/problems/contains-duplicate/)  | [Ruby built-in function](https://github.com/alexcalaca/leetcode-ruby-solutions/tree/217-contains-duplicate)  |   |
 |   |   |   |   |
 |   |   |   |   |
