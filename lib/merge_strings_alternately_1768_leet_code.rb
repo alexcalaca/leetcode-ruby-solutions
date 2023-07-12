@@ -9,6 +9,7 @@ class MergeStringsAlternately1768LeetCode
       merged += word1[i] if i < word1.size
       merged += word2[i] if i < word2.size
     end
+    merged
   end
   
 end
