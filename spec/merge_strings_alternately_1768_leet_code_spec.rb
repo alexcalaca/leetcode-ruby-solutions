@@ -4,7 +4,7 @@ require 'rspec'
 describe MergeStringsAlternately1768LeetCode do
   let(:klass) { MergeStringsAlternately1768LeetCode.new }
 
-  context 'when word1 and word2 aare not empty' do
+  context 'when word1 and word2 are not empty' do
     it 'returns the merged string' do
       word1 = "abc"
       word2 = "123"
@@ -17,6 +17,13 @@ describe MergeStringsAlternately1768LeetCode do
     it 'returns the non-empty word as the empty string' do
       expect(klass.merge_alternately("", "abcdef")).to eq("abcdef")
       expect(klass.merge_alternately("", "123")).to eq("123")
+    end
+  end
+
+  context 'when word2 is empty' do
+    it 'returns the non-empty word as the empty string' do
+      expect(klass.merge_alternately("xyz", "")).to eq("xyz")
+      expect(klass.merge_alternately("2025", "")).to eq("2025")
     end
   end
 end
