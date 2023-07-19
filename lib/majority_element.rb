@@ -8,4 +8,5 @@
 # @return {Integer}
 def majority_element(nums)
   occurrences = nums.tally
+  occurrences.key(occurrences.values.max)
 end
