@@ -5,4 +5,23 @@
 # @param {Integer[]} nums
 # @return {Integer}
 def most_frequent_even(nums)
+    only_evens = Hash.new(0)
+
+    nums.each do |num|
+        only_evens[num] += 1 if num.even?
+    end
+
+    return -1 if only_evens.empty?
+
+    highest_frequency = 0
+    smallest_frequent = nil
+
+    only_evens.each do |num, frequency|
+        if frequency > highest_frequency || (frequency == highest_frequency && num < smallest_frequent)
+            highest_frequency = frequency
+            smallest_frequent = num
+        end
+    end
+
+    smallest_frequent
 end
