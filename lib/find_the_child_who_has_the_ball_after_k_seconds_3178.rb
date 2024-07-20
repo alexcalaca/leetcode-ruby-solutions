@@ -11,4 +11,12 @@
 # @param {Integer} k
 # @return {Integer}
 def number_of_child(n, k)
+  full_cycle = 2 * (n - 1)
+  steps = k % full_cycle 
+
+  if steps < n
+    steps
+  else
+    full_cycle - steps
+  end
 end
