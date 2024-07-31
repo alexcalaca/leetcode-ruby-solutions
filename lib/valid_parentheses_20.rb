@@ -4,3 +4,17 @@
 # Open brackets must be closed by the same type of brackets.
 # Open brackets must be closed in the correct order.
 # Every close bracket has a corresponding open bracket of the same type.
+
+def is_valid(s)
+  hash = {"(" => ")", "[" => "]", "{" => "}"}
+  stack = []
+
+  s.each_char do | char |
+    if hash[stack.last] == char
+      stack.pop
+    else
+      stack.push(char)
+    end    
+  end
+  stack.empty?
+end
