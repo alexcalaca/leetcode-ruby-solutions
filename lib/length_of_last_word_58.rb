@@ -8,3 +8,11 @@
 def length_of_last_word(s)
 
 end
+
+# Test
+require 'rspec'
+
+RSpec.describe '#length_of_last_word' do
+end
+
+RSpec::Core::Runner.run([$__FILE__])
