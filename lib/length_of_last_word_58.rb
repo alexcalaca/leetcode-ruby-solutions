@@ -5,7 +5,7 @@
 
 # @param {String} s
 # @return {Integer}
-def length_of_last_word(s)
+def length_of_last_word_agnostic(s)
   last_index = s.length - 1
   length_of_last_word = 0
 
@@ -23,31 +23,65 @@ def length_of_last_word(s)
   return length_of_last_word
 end
 
+def length_of_last_word_ruby_way(s)
+  last_word = s.split.last
+
+  return 0 if last_word.nil?
+
+  last_word.length
+end
+
 # Test
 require 'rspec'
-RSpec.describe '#length_of_last_word' do
+RSpec.describe '#length_of_last_word_agnostic' do
   it 'returns the length of the last word in "Hello World"' do
-    expect(length_of_last_word("Hello World")).to eq(5)
+    expect(length_of_last_word_agnostic("Hello World")).to eq(5)
   end
 
   it 'returns the length of the last word in "   fly me   to   the moon  "' do
-    expect(length_of_last_word("   fly me   to   the moon  ")).to eq(4)
+    expect(length_of_last_word_agnostic("   fly me   to   the moon  ")).to eq(4)
   end
 
   it 'returns the length of the last word in "luffy is still joyboy"' do
-    expect(length_of_last_word("luffy is still joyboy")).to eq(6)
+    expect(length_of_last_word_agnostic("luffy is still joyboy")).to eq(6)
   end
 
   it 'returns 0 for a string with only spaces "  "' do
-    expect(length_of_last_word("  ")).to eq(0)
+    expect(length_of_last_word_agnostic("  ")).to eq(0)
   end
 
   it 'returns 0 for an empty string' do
-    expect(length_of_last_word("")).to eq(0)
+    expect(length_of_last_word_agnostic("")).to eq(0)
   end
 
   it 'returns the length of the last word in "a "' do
-    expect(length_of_last_word("a ")).to eq(1)
+    expect(length_of_last_word_agnostic("a ")).to eq(1)
+  end
+end
+
+RSpec.describe '#length_of_last_word_ruby_way' do
+  it 'returns the length of the last word in "Hello World"' do
+    expect(length_of_last_word_ruby_way("Hello World")).to eq(5)
+  end
+
+  it 'returns the length of the last word in "   fly me   to   the moon  "' do
+    expect(length_of_last_word_ruby_way("   fly me   to   the moon  ")).to eq(4)
+  end
+
+  it 'returns the length of the last word in "luffy is still joyboy"' do
+    expect(length_of_last_word_ruby_way("luffy is still joyboy")).to eq(6)
+  end
+
+  it 'returns 0 for a string with only spaces "  "' do
+    expect(length_of_last_word_ruby_way("  ")).to eq(0)
+  end
+
+  it 'returns 0 for an empty string' do
+    expect(length_of_last_word_ruby_way("")).to eq(0)
+  end
+
+  it 'returns the length of the last word in "a "' do
+    expect(length_of_last_word_ruby_way("a ")).to eq(1)
   end
 end
 
