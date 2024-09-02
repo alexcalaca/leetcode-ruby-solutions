@@ -1,4 +1,4 @@
-#58. Length of Last Word
+# 58. Length of Last Word
 # https://leetcode.com/problems/length-of-last-word/description/
 # Given a string s consisting of words and spaces, return the length of the last word in the string.
 # A word is a maximal  substring  consisting of non-space characters only.
@@ -6,12 +6,25 @@
 # @param {String} s
 # @return {Integer}
 def length_of_last_word(s)
+  last_index = s.length - 1
+  length_of_last_word = 0
 
+  while last_index >= 0
+    if s[last_index] == ' '
+      if length_of_last_word > 0
+        break
+      end
+    else
+      length_of_last_word += 1
+    end
+    last_index -= 1
+  end
+
+  return length_of_last_word
 end
 
 # Test
 require 'rspec'
-
 RSpec.describe '#length_of_last_word' do
   it 'returns the length of the last word in "Hello World"' do
     expect(length_of_last_word("Hello World")).to eq(5)
