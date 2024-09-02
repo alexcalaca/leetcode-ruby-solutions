@@ -7,6 +7,7 @@
 | #0001 | [Two Sum](https://leetcode.com/problems/two-sum/description/)  | [Hashmap](https://github.com/alexcalaca/leetcode-ruby-solutions/blob/main/lib/two_sum_01.rb)  |   |
 | #0009 | [Palindrome number](https://leetcode.com/problems/palindrome-number/description/)  | [No string/array conversion](https://github.com/alexcalaca/leetcode-ruby-solutions/blob/main/lib/palindrome_number_09.rb)  |   |
 | #0020 | [Valid parentheses](https://leetcode.com/problems/valid-parentheses/description/)  | [Stack solution](https://github.com/alexcalaca/leetcode-ruby-solutions/blob/main/lib/valid_parentheses_20.rb)  |   |
+| #0058 | [ Length of Last Word](https://leetcode.com/problems/length-of-last-word/description/)  | [Agnostic solution](https://github.com/alexcalaca/leetcode-ruby-solutions/blob/main/lib/length_of_last_word_58.rb)  | [Ruby built-in functions](https://github.com/alexcalaca/leetcode-ruby-solutions/blob/main/lib/length_of_last_word_58.rb) |
 | #0169 | [Majority element](https://leetcode.com/problems/majority-element/)  | [tally and max](https://github.com/alexcalaca/leetcode-ruby-solutions/tree/169-majority-element)  |   |
 | #0217 | [Contains duplicate](https://leetcode.com/problems/contains-duplicate/)  | [Ruby built-in function](https://github.com/alexcalaca/leetcode-ruby-solutions/tree/217-contains-duplicate)  |   |
 | #1768 | [Merge Strings Alternately](https://leetcode.com/problems/merge-strings-alternately/)  | [Ruby](https://github.com/alexcalaca/leetcode-ruby-solutions/tree/1768-merge-strings-alternately)  |   |
